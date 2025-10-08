@@ -1,13 +1,15 @@
 import { useState } from 'react'
-import Header from './Component/Header';
-import LowerHeader from './Component/LowerHeader';
+import Header from './Component/Head/Header';
+import CarouselFile from './Component/Carousel/CarouselFile'
+import Category from './Component/Category/Category';
 
 
 export default function App() {
   return (
     <>
       <Header />
-      <LowerHeader />
+      <CarouselFile />
+      <Category />
     </>
   );
 }
