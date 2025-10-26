@@ -1,15 +1,16 @@
 import React from 'react'
 import Rating from '@mui/material/Rating'
 import CurrencyFormat from '../CurrencyFormat/CurrencyFormat'
+import { Link } from 'react-router-dom'
 
 function ProductCard({data}) {
     const {image,title,id,price,rating} = data
 
   return (
     <div className=" group relative h-[350px] shadow-[2px_2px_3px_-1px_rgba(0,0,0,0.3),_-2px_-2px_3px_-1px_rgba(0,0,0,0.3)] box-border mx-2 mb-5 rounded-md">
-      <a href="">
+      <Link to = {`/products/${id}`}>
         <img src={image} alt="" className="object-contain w-full h-[200px] " />
-      </a>
+      </Link>
       <div>
         <h1 className="break-words ml-1">{title}</h1>
         <div className="flex items-center ml-1">

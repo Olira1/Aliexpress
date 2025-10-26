@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CategoryCard({ data }) {
   return (
     <div className="bg-white rounded-md shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col justify-between">
-      <a href="#" className="block h-full">
+      <Link to= {`/category/${data.name}`} className="block h-full">
         <div className="p-2">
           <h2 className="text-lg font-semibold">{data.title}</h2>
           <div className="flex justify-center">
@@ -17,7 +18,7 @@ function CategoryCard({ data }) {
         <p className="text-blue-600 text-sm font-medium pl-3 pb-3 hover:underline">
           shop now
         </p>
-      </a>
+      </Link>
     </div>
   );
 }

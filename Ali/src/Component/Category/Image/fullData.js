@@ -10,18 +10,18 @@ export const CategoryImage = [
     image: imge1,
   },
   {
-    title: "Books",
-    name: "books",
+    title: "Discover fashion trends",
+    name: "Discover fashion trends",
     image: imge2,
   },
   {
-    title: "Pellows",
-    name: "pellows",
+    title: "men's clothing",
+    name: "men's clothing",
     image: imge3,
   },
   {
-    title: "Furnitures",
-    name: "furnitures",
+    title: "Jewelery",
+    name: "Jewelery",
     image: imge4,
   },
 ];

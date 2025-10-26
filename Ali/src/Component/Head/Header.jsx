@@ -4,6 +4,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { FaSearch, FaCartPlus } from "react-icons/fa";
 import ReactCountryFlag from "react-country-flag";
 import LowerHeader from "./LowerHeader";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -11,7 +12,9 @@ function Header() {
       <header className="flex justify-between bg-[#131921] text-white">
         {/* ---------- Left: Logo & Location ---------- */}
         <div className="flex items-center gap-3 cursor-pointer mb-2 mt-2">
-          <img src={Amazon_logo} alt="Amazon logo" className="w-24" />
+          <Link to="/">
+            <img src={Amazon_logo} alt="Amazon logo" className="w-24" />
+          </Link>
           {/* Location */}
           <div className="flex items-center gap-1">
             <SlLocationPin className="" />
@@ -47,19 +50,24 @@ function Header() {
             </select>
           </div>
           <div className="leading-4 cursor-pointer hover:underline">
-            <p className="text-[#d1d5dc]">Hello, Sign in</p>
-            <p>Account & Lists</p>
+            <Link to="/auth">
+              <p className="text-[#d1d5dc]">Hello, Sign in</p>
+              <p>Account & Lists</p>
+            </Link>
           </div>
           <div className="leading-4 cursor-pointer hover:underline">
-            <p className="text-[#d1d5dc]">Returns</p>
-            <p>& Orders</p>
+            <Link to="/order">
+              <p className="text-[#d1d5dc]">Returns</p>
+              <p>& Orders</p>
+            </Link>
           </div>
           <div className="flex text-base gap-1 items-center cursor-pointer">
-            <FaCartPlus className="size-6" />
-            <span>Cart</span>
+            <Link to="/cart">
+              <FaCartPlus className="size-6" />
+              <span>Cart</span>
+            </Link>
           </div>
         </div>
-        
       </header>
       <LowerHeader />
     </div>
